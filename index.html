@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Golden Sweet - المنيو</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8ea;--card:#ffffff;--text:#2a1d0a;--muted:#7a6238;--gold:#9a6b00;--gold-bg:#f3d98a;--line:#e8d3a0;--btn-text:#ffffff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0b;--card:#161410;--text:#f6ead0;--muted:#bfa86a;--gold:#e8bd4c;--gold-bg:#e8bd4c;--line:#4a3a14;--btn-text:#0b0b0b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b0b0b;--card:#161410;--text:#f6ead0;--muted:#bfa86a;--gold:#e8bd4c;--gold-bg:#e8bd4c;--line:#4a3a14;--btn-text:#0b0b0b;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Cairo",Tahoma,Arial,sans-serif;line-height:1.7}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+.hero{text-align:center;padding:48px 0 24px}
+.hero .crown{font-size:44px}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:clamp(40px,10vw,68px);margin:0;color:var(--gold)}
+.hero p{color:var(--muted);margin:4px 0 20px;font-size:18px}
+.btn{display:inline-block;background:var(--gold);color:var(--btn-text);padding:12px 28px;border-radius:999px;text-decoration:none;font-weight:700}
+nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+nav a{border:1px solid var(--line);color:var(--gold);text-decoration:none;padding:6px 16px;border-radius:999px;font-weight:700;font-size:15px}
+section{margin:28px 0}
+h2{text-align:center;color:var(--gold);font-size:28px;margin:0 0 12px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:8px 18px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .n{font-size:18px}
+.row .p{background:var(--gold-bg);color:#1a1405;font-weight:900;border-radius:999px;padding:2px 14px;min-width:64px;text-align:center}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.note{text-align:center;color:var(--muted);font-size:14px;margin-top:8px}
+.info{text-align:center}
+.info p{margin:6px 0 14px}
+.hero .btn{margin:4px}
+footer{text-align:center;color:var(--muted);padding:32px 0 24px;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="crown">👑</div>
+  <h1>Golden Sweet</h1>
+  <p>المنيو</p>
+  <a class="btn" href="https://wa.me/201201068500" target="_blank" rel="noopener">واتساب فرع موقف المنصورة</a>
+  <a class="btn" href="https://wa.me/201019123164" target="_blank" rel="noopener">واتساب فرع الغشام</a>
+</header>
+
+<nav>
+  <a href="#kunafa">كنافة</a><a href="#other">حلويات</a><a href="#qatayef">قطايف</a><a href="#basbousa">بسبوسة</a><a href="#maamoul">معمول</a><a href="#torta">تورت</a>
+</nav>
+
+<div id="app"></div>
+
+<section class="info">
+  <h2>تعالى زورنا</h2>
+  <div class="box">
+    <p><strong>فرع موقف المنصورة</strong><br>أمام شركة حسونة للأدوات الكهربائية<br><a href="https://wa.me/201201068500" style="color:var(--gold)" target="_blank" rel="noopener">01201068500</a></p>
+    <p><strong>فرع الغشام</strong><br>أمام جراج صلاح سالم<br><a href="https://wa.me/201019123164" style="color:var(--gold)" target="_blank" rel="noopener">01019123164</a></p>
+  </div>
+</section>
+<footer>© Golden Sweet<br>إدارة الأستاذ أحمد سعيد</footer>
+</div>
+
+<script>
+var menu=[
+ {id:"kunafa",t:"كنافة",i:[["كنافة سيجار",200],["كنافة كريمة",200],["كنافة مانجو",220],["كنافة قشطة",250],["كنافة كونو",250],["كنافة نوتيلا",250],["كنافة فواكه مشكلة",250],["كنافة عثمانلي",250],["كنافة مكسرات",350],["كنافة أساور مكسرات",350],["كنافة أساور نوتيلا",300],["كنافة بورمة",450]]},
+ {id:"other",t:"حلويات وجلاش",i:[["جلاش كريمة",200],["جلاش مكسرات",300],["جلاش أساور نوتيلا",300],["عزيزية / أم علي",200],["مدلعة",200],["بقلاوة",350],["بسيمة سادة",300],["شكلمة",350],["رموش الست",220],["صوابع زينب",150],["بلح الشام",150]]},
+ {id:"qatayef",t:"قطايف",i:[["قطايف كريمة",200],["قطايف قشطة",220],["قطايف مكسرات",300]]},
+ {id:"basbousa",t:"بسبوسة",i:[["بسبوسة سادة",200],["بسبوسة تركي",250],["بسبوسة بندق ولوز",300],["بسبوسة قشطة",300],["بسبوسة فستق",350]]},
+ {id:"maamoul",t:"معمول",i:[["معمول بالتمر",220],["معمول بالجوز",250],["معمول بالفستق",300]]},
+ {id:"torta",t:"تورت (غربي)",i:[["تورت ٢٥ × ٢٥",450],["تورت ٣٠ × ٣٠",600],["تورت ٣٠ × ٤٠",750],["تورت ٤٠ × ٤٠",950],["تورت ٤٠ × ٦٠",1500]]},
+ {id:"fondant",t:"تورت عجينة السكر",i:[],note:"السعر بيختلف حسب الشكل والمقاس. كلمنا على واتساب وابعتلنا الفكرة وهنقولك السعر."}
+];
+var h="";
+menu.forEach(function(s){
+  h+='<section id="'+s.id+'"><h2>'+s.t+'</h2><div class="box">';
+  s.i.forEach(function(x){h+='<div class="row"><span class="n">'+x[0]+'</span><span class="p">'+x[1]+'</span></div>';});
+  if(s.note){h+='<div class="row"><span class="n">'+s.note+'</span></div>';}
+  h+='</div></section>';
+});
+document.getElementById("app").innerHTML=h;
+</script>
+</body>
+</html>
