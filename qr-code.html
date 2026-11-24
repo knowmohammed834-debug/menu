@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>QR Golden Sweet</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--bg:#fff8ea;--card:#ffffff;--text:#2a1d0a;--muted:#7a6238;--gold:#9a6b00;--line:#e8d3a0;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0b;--card:#161410;--text:#f6ead0;--muted:#bfa86a;--gold:#e8bd4c;--line:#4a3a14;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b0b0b;--card:#161410;--text:#f6ead0;--muted:#bfa86a;--gold:#e8bd4c;--line:#4a3a14;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.8;text-align:center;padding:32px 16px}
+h1{font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:40px;margin:0}
+p{color:var(--muted);margin:4px 0 20px}
+#qr{display:inline-block;background:#fff;padding:18px;border-radius:18px;border:3px solid var(--gold)}
+#qr img,#qr canvas{display:block}
+label{display:block;margin-top:24px;color:var(--muted);font-size:14px}
+input{width:100%;max-width:460px;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:14px;direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<h1>Golden Sweet</h1>
+<p>امسح الكود وشوف المنيو</p>
+<div id="qr"></div>
+<label for="u">الصق لينك صفحة المحل هنا وهيظهر الكود</label>
+<input id="u" value="" placeholder="https://...">
+<script>
+var box=document.getElementById("qr"),inp=document.getElementById("u");
+function draw(){
+  box.innerHTML="";
+  var t=inp.value.trim();
+  if(!t||typeof QRCode==="undefined")return;
+  new QRCode(box,{text:t,width:260,height:260,colorDark:"#000000",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
+}
+inp.addEventListener("input",draw);
+draw();
+</script>
+</body>
+</html>
